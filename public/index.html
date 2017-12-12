@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="theme-color" content="#000000">
+
+        <title>Journey Server</title>
+
+        {{range .Versions}}
+            {{range .Css}}
+                <link rel="stylesheet" href="{{.Url}}"></link>
+            {{end}}
+        {{end}}
+    </head>
+    <body>
+        <noscript>
+            You need to enable JavaScript to run this app.
+        </noscript>
+        <p>Congratulations on setting up a Journey server. Copy your index.html into the public folder, and your journey.json into base directory to get started.</p>
+        {{range .Versions}}
+            {{range .Js}}            
+                <script type="text/javascript" src="{{.Url}}"></script>
+            {{end}}
+        {{end}}
+    </body>
+</html>
