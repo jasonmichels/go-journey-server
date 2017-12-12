@@ -25,7 +25,7 @@ func main() {
 	nrName := os.Getenv("NEW_RELIC_NAME")
 	nrKey := os.Getenv("NEW_RELIC_KEY")
 	registryURL := cf.Getenv("JOURNEY_REGISTRY_URL", "localhost:9011")
-	port := cf.Getenv("PORT", ":9010")
+	port := cf.Getenv("PORT", ":80")
 	pathPrefix := os.Getenv("PATH_PREFIX")
 
 	j, err := cf.LoadJourneyConfig("journey.json")
